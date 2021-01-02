@@ -1,0 +1,242 @@
+//Colors
+$color-yellow: #FFEB83
+$color-darkGrey: #2e2e2e
+$color-white: #fff
+
+//breakpoint
+$break-mobile: 576px
+$break-tablet: 768px
+$break-desktop: 992px
+$break-largeDesktop: 1200px
+
+=fz($s,$ls,$lh)
+	font-size: $s
+    letter-spacing: $ls
+    line-height: $lh
+
+
+*
+    // border: 1px solid black
+
+::selection 
+    background: $color-darkGrey
+    color: $color-white
+
+.navbar
+    position: relative
+    height: 3.75em
+    z-index: 1
+    border: 1px solid white
+    overflow: hidden
+    .navbar-brand
+        color: $color-white
+        +fz(2.25em,0.25em,0)
+        margin-left: 10%
+        @media screen and (max-width: $break-mobile) 
+            font-size: 1.5em
+        
+    .navbar-nav
+        margin-left: 50%
+        .nav-link
+            color: $color-white
+            margin: 1em
+            white-space:nowrap
+            
+        .nav-link:hover
+            color: $color-yellow
+        
+
+.carousel
+    position: relative
+    margin-top: -70px
+    z-index: 0
+
+    .carousel-indicators
+        position: absolute
+
+    .carousel-inner
+        position: relative
+        top: 0
+
+    .carousel-control-prev, .carousel-control-next
+        @media screen and (max-width: $break-mobile) 
+            display: none
+    .header_content
+        position: absolute
+        left: 10%
+        top: 15%
+        z-index: 3
+        color: $color-white
+        @media screen and (max-width: $break-tablet) 
+            top: 20%
+        @media screen and (max-width: $break-mobile) 
+            top: 25%
+            left: 5%
+        .slogan
+            +fz(4.5em,0.1em,0)
+            @media screen and (max-width: $break-tablet) 
+                font-size: 3em
+            @media screen and (max-width: $break-mobile) 
+                font-size: 2em
+            
+            
+        .subSlogan
+            font-size: 1.5em
+            letter-spacing: 0.2em
+            left: 10%
+            @media screen and (max-width: $break-tablet) 
+                font-size: 1em
+            
+            
+
+        .button
+            position: absolute
+            display: flex
+            justify-content: start
+            margin-top: 5%
+            z-index: 3
+            
+            .btn-link
+                background-color: $color-yellow
+                width: 132px
+                height: 42px
+                color: #000
+                font-weight: 700
+                border: 1px solid black
+                margin-right: 5%
+                transition: all 0.6s
+                display: flex
+    
+        
+            .btn-link:hover 
+                background: rgba(0, 0, 0, 0)
+                border: 1px solid $color-yellow
+                color: $color-yellow
+    
+.content1, .content2
+    width: 100%
+    text-align: center
+    margin-top: 5%
+    
+    .content1-title, .content2-title
+        font-weight: 900
+        color: $color-darkGrey
+        @media screen and (max-width: $break-tablet)
+            font-size: 1.8em
+        @media screen and (max-width: $break-mobile) 
+            font-size: 1.2em
+    
+    .content1-content, .content2-content
+        display: flex
+        justify-content: center
+        align-content: center
+        position: relative
+        padding: 0 10% 
+        margin-top: 3%
+        height: 450px
+        @media screen and (max-width: $break-tablet) 
+            padding: 15%
+            flex-direction: column
+            height: 1200px
+        
+        
+        .content1-content-card
+            position: relative
+            height: 350px
+            overflow: hidden
+            margin: 0 4%
+            border-radius: 10px
+            @media screen and (max-width: $break-tablet) 
+                height: 500px
+                margin: 5% 
+                
+            
+            .content1-content-card-img
+                cursor: pointer
+                transition: all 0.6s
+            .content1-content-text
+                position: absolute
+                top: 15%
+                text-align: left
+                padding: 10%
+                color: $color-white
+                display: none  
+                transition:  0.6s
+
+        .content1-content-card:hover
+            
+            .content1-content-card-img
+                transform: scale(1.2)
+                filter: grayscale(80%)
+            .content1-content-text
+                display: block
+        
+        .content2-content-card
+            position: relative
+            height: 435px
+            margin: 0 4%
+            border-radius: 10px
+            border: 1px solid black
+            overflow: hidden
+            @media screen and (max-width: $break-tablet) 
+                height: 500px
+                margin: 5%
+            .content2-content-card-img
+                // width: 100%
+                height: 200px
+                overflow: hidden
+            
+        .content2-content-text  
+            
+            h3
+                margin-top: 10%
+            p
+                text-align: left
+                padding: 2% 10%
+        
+    .flex-1
+        flex: 1
+.footer
+    text-align: center
+    margin-top: 5%
+    background-color: $color-darkGrey
+    height: 250px
+    text-decoration: none
+    padding: 2%
+    @media screen and (max-width: $break-mobile) 
+        height: 280px
+    .footer-navbar-brand
+        color: $color-white
+        +fz(2.25em,0.25em,0)
+        text-decoration: none
+        @media screen and (max-width: $break-mobile) 
+            font-size: 1.5em
+        
+    .footer-navbar
+        display: flex
+        justify-content: center
+        align-content: center
+        margin-top: 1%
+        @media screen and (max-width: $break-mobile) 
+            flex-direction: column
+        .footer-nav-item
+            color: $color-white
+        .footer-nav-item:hover
+            color: $color-yellow
+    .icon
+        display: inline-flex
+        margin: 5px
+        a
+            margin: 0.5em
+
+
+
+    
+
+
+
+
+
+
+  
+        
